@@ -16,12 +16,22 @@ if(player){
             let computer = (computerChoice === 1) ? "rock":
                                  (computerChoice === 2) ? "paper":"sissor"
 
-            let result = (playerOne === computerChoice) ? `Player: ${playerOne} \ncomputer: ${computer} \nTie \n\n\nSupper you Guess Correct`:
+            let result =
+
+            // Rock
             (playerOne === "rock" && computer === "paper")? `Player: ${playerOne} \ncomputer: ${computer} \ncomputer Wins \n\n\nBetter Luck Next time`:
+        
             (playerOne === "rock" && computer === "sissor")? `Player: ${playerOne} \ncomputer: ${computer} \nPlayer Wins \n\n\nSupper Congratulations`:
+
+            // Paper
             (playerOne === "paper" && computer === "rock")? `Player: ${playerOne} \ncomputer: ${computer} \nPlayer Wins \n\n\nSupper Congratulations`:
+
             (playerOne === "paper" && computer === "sissor")? `Player: ${playerOne} \ncomputer: ${computer} \ncomputer Wins \n\n\nBetter Luck Next time`:
-            (playerOne === "sissor" && computer === "rock")? `Player: ${playerOne} \ncomputer: ${computer} \ncomputer Wins \n\n\nBetter Luck Next time`:`Player: ${playerOne} \ncomputer: ${computer} \nPlayer Wins \n\n\nSupper Congratulations`;
+
+            // sissor
+            (playerOne === "sissor" && computer === "rock")? `Player: ${playerOne} \ncomputer: ${computer} \ncomputer Wins \n\n\nBetter Luck Next time`:
+            
+            (playerOne === "sissor" && computer === "paper")? `Player: ${playerOne} \ncomputer: ${computer} \nPlayer Wins \n\n\nSupper Congratulations`: `Player: ${playerOne} \ncomputer: ${computer} \n\nTie `;
             alert(result);
 
             let playagain = confirm("Play Again");
@@ -38,7 +48,7 @@ if(player){
     else{
         alert("I think you are confuse. so We will play later.")
         let playagain = confirm("Play Again");
-        playagain ? location.reload():alert("Thanks You")
+        playagain ? location.reload():alert("Thanks You");
     }
 }
 else{
