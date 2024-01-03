@@ -1,2 +1,2 @@
 # JavaScript
-JavaScript Projects
+Intraction Game between Player to computer.
